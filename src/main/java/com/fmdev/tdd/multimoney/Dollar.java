@@ -1,7 +1,7 @@
 package com.fmdev.tdd.multimoney;
 
 public class Dollar {
-    public int amount;
+    private int amount;
 
     public Dollar(int amount) {
         this.amount = amount;
@@ -19,7 +19,6 @@ public class Dollar {
         Dollar dollar = (Dollar) o;
 
         return amount == dollar.amount;
-
     }
 
     @Override
