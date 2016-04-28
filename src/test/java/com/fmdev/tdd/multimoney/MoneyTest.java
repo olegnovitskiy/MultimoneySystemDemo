@@ -2,6 +2,8 @@ package com.fmdev.tdd.multimoney;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class MoneyTest {
     @Test
     public void testMultiplication() {
