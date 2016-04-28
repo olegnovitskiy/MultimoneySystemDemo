@@ -9,6 +9,7 @@ public class Money {
         this.currency = currency;
     }
 
+    @SuppressWarnings("EqualsWhichDoesntCheckParameterClass")
     @Override
     public boolean equals(Object o) {
         Money money = (Money) o;
@@ -24,8 +25,8 @@ public class Money {
         return new Dollar(amount, "USD");
     }
 
-    public Money times(int amount) {
-        return null;
+    public Money times(int multiplier) {
+        return new Money(amount * multiplier, currency);
     }
 
     public static Money franc(int amount) {
