@@ -1,5 +1,6 @@
 package com.fmdev.tdd.multimoney;
 
+import junit.framework.Assert;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertFalse;
@@ -73,5 +74,10 @@ public class MoneyTest {
         bank.addRate("CHF", "USD", 2);
         Money result = bank.reduce(Money.franc(2), "USD");
         assertEquals(Money.dollar(1), result);
+    }
+
+    @Test
+    public void testArrayEquals() {
+        assertEquals(new Object[]{"abc"}, new Object[]{"abc"});
     }
 }
