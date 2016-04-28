@@ -7,7 +7,7 @@ public class Dollar extends Money {
     }
 
     public Money times(int multiplier) {
-        return new Dollar(hashCode() * multiplier, null);
+        return Money.dollar(amount * multiplier);
     }
 
 }
