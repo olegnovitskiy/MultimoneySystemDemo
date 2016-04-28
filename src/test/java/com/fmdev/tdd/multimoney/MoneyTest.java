@@ -3,8 +3,8 @@ package com.fmdev.tdd.multimoney;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertFalse;
+import static junit.framework.Assert.assertTrue;
 import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
 
 public class MoneyTest {
     @Test
@@ -28,5 +28,11 @@ public class MoneyTest {
         assertTrue(Money.franc(5).equals(Money.franc(5)));
         assertFalse(Money.franc(5).equals(Money.franc(6)));
         assertFalse(Money.dollar(5).equals(Money.franc(5)));
+    }
+
+    @Test
+    public void testCurrency() {
+        assertEquals("USD", Money.dollar(1).currency());
+        assertEquals("CHF", Money.franc(1).currency());
     }
 }

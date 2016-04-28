@@ -9,4 +9,9 @@ public class Dollar extends Money {
         return new Dollar(hashCode() * multiplier);
     }
 
+    @Override
+    public String currency() {
+        return "USD";
+    }
+
 }
