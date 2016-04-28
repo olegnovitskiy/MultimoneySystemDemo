@@ -1,6 +1,5 @@
 package com.fmdev.tdd.multimoney;
 
-import junit.framework.Assert;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertFalse;
@@ -77,7 +76,7 @@ public class MoneyTest {
     }
 
     @Test
-    public void testArrayEquals() {
-        assertEquals(new Object[]{"abc"}, new Object[]{"abc"});
+    public void testIdentityRate() {
+        assertEquals(1, new Bank().rate("USD", "USD"));
     }
 }
