@@ -1,9 +1,10 @@
 package com.fmdev.tdd.multimoney;
 
-/**
- * Created by NIO on 28.04.2016. All rights reserved.
- */
-public class Sum {
+public class Sum implements Expression {
     Money augend;
     Money addend;
+
+    public Sum(Money augend, Money addend) {
+
+    }
 }
