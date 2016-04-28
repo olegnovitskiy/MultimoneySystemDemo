@@ -1,6 +1,6 @@
 package com.fmdev.tdd.multimoney;
 
-public class Money {
+public abstract class Money {
     protected int amount;
 
     @Override
@@ -18,7 +18,9 @@ public class Money {
         return amount;
     }
 
-    public static Dollar dollar(int amount) {
+    public static Money dollar(int amount) {
         return new Dollar(amount);
     }
+
+    public abstract Money times(int amount);
 }
