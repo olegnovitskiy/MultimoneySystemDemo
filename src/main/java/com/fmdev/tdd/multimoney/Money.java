@@ -1,6 +1,6 @@
 package com.fmdev.tdd.multimoney;
 
-public abstract class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
@@ -28,7 +28,9 @@ public abstract class Money {
         return new Dollar(amount, "USD");
     }
 
-    public abstract Money times(int amount);
+    public Money times(int amount) {
+        return null;
+    }
 
     public static Money franc(int amount) {
         return new Franc(amount, "CHF");
@@ -36,5 +38,13 @@ public abstract class Money {
 
     protected String currency() {
         return currency;
+    }
+
+    @Override
+    public String toString() {
+        return "Money{" +
+                "amount=" + amount +
+                ", currency='" + currency + '\'' +
+                '}';
     }
 }
