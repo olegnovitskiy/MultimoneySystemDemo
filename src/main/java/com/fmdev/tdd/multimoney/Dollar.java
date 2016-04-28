@@ -14,9 +14,9 @@ public class Dollar extends Money {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Money dollar = (Dollar) o;
+        Money money = (Money) o;
 
-        return amount == dollar.amount;
+        return amount == money.amount;
     }
 
     @Override
