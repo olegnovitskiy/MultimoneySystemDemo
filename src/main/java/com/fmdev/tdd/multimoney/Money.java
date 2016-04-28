@@ -17,4 +17,8 @@ public class Money {
     public int hashCode() {
         return amount;
     }
+
+    public static Dollar dollar(int amount) {
+        return new Dollar(amount);
+    }
 }
