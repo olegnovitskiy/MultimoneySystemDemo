@@ -1,8 +1,6 @@
 package com.fmdev.tdd.multimoney;
 
-public class Franc {
-    private int amount;
-
+public class Franc extends Money {
     public Franc(int amount) {
         this.amount = amount;
     }
@@ -16,9 +14,9 @@ public class Franc {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Franc franc = (Franc) o;
+        Money money = (Money) o;
 
-        return amount == franc.amount;
+        return amount == money.amount;
 
     }
 
