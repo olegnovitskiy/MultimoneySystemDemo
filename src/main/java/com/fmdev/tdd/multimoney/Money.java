@@ -2,6 +2,7 @@ package com.fmdev.tdd.multimoney;
 
 public abstract class Money {
     protected int amount;
+    protected String currency;
 
     @Override
     public boolean equals(Object o) {
@@ -28,5 +29,7 @@ public abstract class Money {
         return new Franc(amount);
     }
 
-    public abstract String currency();
+    protected String currency() {
+        return currency;
+    }
 }
