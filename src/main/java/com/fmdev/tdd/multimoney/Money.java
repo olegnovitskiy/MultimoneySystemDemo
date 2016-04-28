@@ -20,13 +20,13 @@ public abstract class Money {
     }
 
     public static Money dollar(int amount) {
-        return new Dollar(amount, null);
+        return new Dollar(amount, "USD");
     }
 
     public abstract Money times(int amount);
 
     public static Money franc(int amount) {
-        return new Franc(amount, null);
+        return new Franc(amount, "CHF");
     }
 
     protected String currency() {
